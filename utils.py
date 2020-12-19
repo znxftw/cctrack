@@ -18,5 +18,5 @@ def rename_file(old_name, new_name):
 def create_file(filename):
     if os.path.exists(filename):
         return
-    with open(filename, 'w') as fp:
+    with open(filename, 'w'):
         pass
