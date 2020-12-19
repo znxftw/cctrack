@@ -1,4 +1,4 @@
-Track rating history on competitive programming websites
+Track rating history on competitive programming websites. Currently updates today's rating and appends it to csv files. You can schedule an event to run it everyday or just do it manually.
 
 ## Setup
 
