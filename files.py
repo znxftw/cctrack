@@ -15,13 +15,13 @@ def read(filename):
     return contents
 
 
-def write(filename, contents, today):
+def write(filename, contents, today, data):
     write_file = open('temporary_file.csv', "w", newline='')
     writer = csv.writer(write_file, delimiter=',')
 
     # write today if empty
     if(len(contents) == 0):
-        write_today(writer, today)
+        write_today(writer, today, data)
 
     # copy already existing dates
     for line in contents:
@@ -30,11 +30,11 @@ def write(filename, contents, today):
         if line[0] != today:
             writer.writerow(line)
         else:
-            write_today(writer, today)
+            write_today(writer, today, data)
 
     # update today
     if(len(contents) > 0 and contents[-1][0] != today):
-        write_today(writer, today)
+        write_today(writer, today, data)
 
     write_file.close()
 
@@ -42,5 +42,7 @@ def write(filename, contents, today):
     rename_file('temporary_file.csv', filename)
 
 
-def write_today(writer, today):
-    writer.writerow([today, '1234'])
+def write_today(writer, today, data):
+    row = [today]
+    row.extend(data)
+    writer.writerow(row)
