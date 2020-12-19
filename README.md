@@ -9,7 +9,7 @@ Track rating history on competitive programming websites. Currently updates toda
 
 - Get the latest stable release of [ChromeDriver](https://chromedriver.chromium.org/) for your operating system
 
-- Configure `constants.py` with your profile URLs
+- Configure `constants.py` with your profile URLs and ChromeDriver path
 
 To run, `python update.py`
 
