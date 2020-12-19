@@ -10,6 +10,8 @@ Track rating history on competitive programming websites
 
 - Get the latest stable release of [ChromeDriver](https://chromedriver.chromium.org/) for your operating system
 
+- Configure `constants.py` with your profile URLs
+
 To run, `python update.py`
 
 
